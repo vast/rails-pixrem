@@ -1,5 +1,5 @@
 Rails-pixrem
-==================================================================
+===================================================================
 
 CSS post-processor which generates pixel fallbacks for rem units
 in your Rails (Sinatra) application.
@@ -36,8 +36,8 @@ Rails-pixrem will automatically add fallback rules with pixel values:
 
 ### Sprockets
 
-If you use any non-Rails framework with Sprockets connect Sprockets environment
-with rails-pixrem:
+If you use a non-Rails framework with Sprockets, connect Sprockets environment
+with `RailsPixrem`:
 
 
 ```ruby
