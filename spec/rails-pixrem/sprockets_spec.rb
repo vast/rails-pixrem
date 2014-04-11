@@ -1,13 +1,11 @@
 require 'spec_helper'
 
-describe RailsPixrem::Sprockets do
+describe 'Sprockets integration' do
   let(:assets) { Sprockets::Environment.new }
-  let(:processor) { RailsPixrem::Processor.new }
-  let(:pixrem) { described_class.new(processor) }
 
   before do
     assets.append_path(Pathname(__FILE__).dirname.join('../dummy/app/assets/stylesheets'))
-    pixrem.install(assets)
+    RailsPixrem.install(assets)
   end
 
   it 'works with Sprockets' do
