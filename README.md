@@ -48,3 +48,20 @@ end
 require 'rails-pixrem'
 RailsPixrem.install(assets)
 ```
+
+## Configuration
+
+You can specify root element font size (default: '16px') in px, em or percents:
+
+### Ruby On Rails
+
+```yaml
+# config/pixrem.yml
+root_value: 24px
+```
+
+### Sprockets
+
+```ruby
+RailsPixrem.install(assets, root_value: '85%')
+```

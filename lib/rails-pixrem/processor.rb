@@ -3,8 +3,12 @@ require 'execjs'
 
 module RailsPixrem
   class Processor
+    def initialize(options = {})
+      @options = { root_value: '16px' }.merge(options)
+    end
+
     def process(css)
-      processor.call('process', css)
+      processor.call('process', css, @options[:root_value])
     end
 
     private
