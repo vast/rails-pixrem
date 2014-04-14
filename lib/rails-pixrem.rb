@@ -5,11 +5,13 @@ require_relative 'rails-pixrem/railtie' if defined?(Rails)
 module RailsPixrem
   autoload :Sprockets, 'rails-pixrem/sprockets'
 
-  def self.install(assets)
-    Sprockets.new(processor).install(assets)
+  def self.install(assets, options = {})
+    Sprockets.new(processor(options)).install(assets)
   end
 
-  def self.processor
-    @processor ||= Processor.new
+  def self.processor(options = {})
+    @cache ||= {}
+    cache_key = options.to_s
+    @cache[cache_key] ||= Processor.new(options)
   end
 end
