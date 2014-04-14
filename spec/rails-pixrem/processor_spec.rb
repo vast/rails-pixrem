@@ -8,5 +8,11 @@ describe RailsPixrem::Processor do
 
     it { should include('padding: 32px;') }
     it { should include('padding: 2rem') }
+
+    context 'when root value is passed' do
+      let(:processor) { described_class.new(root_value: '20px') }
+
+      it { should include('padding: 40px;') }
+    end
   end
 end
