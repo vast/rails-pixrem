@@ -2,6 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 
 require_relative 'dummy/config/environment'
 require 'rspec/rails'
+require 'rspec/its'
 
 require_relative '../lib/rails-pixrem'
 
