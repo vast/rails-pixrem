@@ -1,6 +1,8 @@
 Rails-pixrem
 ===================================================================
 
+[![Build Status](https://semaphoreapp.com/api/v1/projects/db183d30-2136-4ba5-99e4-d0d8dac5f09d/230344/badge.png)](https://semaphoreapp.com/vast/rails-pixrem)
+
 CSS post-processor which generates pixel fallbacks for rem units
 in your Rails (Sinatra) application.
 
